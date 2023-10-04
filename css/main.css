@@ -1,10 +1,13 @@
+/* Importación de la fuente de Google */
 @import url('https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;600;700;800;900&display=swap');
 
+/* Definición de variables de color y tipo */
 :root {
     --clr-black: #1c1c1c;
     --clr-gray: #ececec;
     --clr-white: #f7f7f7;
 
+    /* Definición de colores para tipos de animales */
     --type-felino:#A8A878;
     --type-canino:#F08030;
     --type-ursido:#6890F0;
@@ -25,6 +28,7 @@
     --type-marsupial: #F0B6BC;
 }
 
+/* Estilos base para todo el documento */
 * {
     margin: 0;
     padding: 0;
@@ -33,28 +37,96 @@
     font-family: 'Rubik', sans-serif;
 }
 
+/* Lista sin viñetas */
 ul {
     list-style-type: none;
 }
 
+/* Estilos base para botones */
 button {
     background-color: transparent;
     border: 0;
     border-radius: 0;
 }
 
+/* Estilos generales para el cuerpo del documento */
 body {
     min-height: 100vh;
     background-color: var(--clr-gray);
-
 }
 
+/* Estilos para el encabezado */
 header {
     padding-block: 1rem;
     box-shadow: 0 0 2rem -1rem rgba(0, 0, 0, .5);
-
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
+/* Estilos para el logo */
+#logo {
+    width: 100px;
+    height: 36px;
+}
+
+/* Estilos para el formulario en el encabezado */
+header form {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+/* Estilos para el grupo de formulario (barra de búsqueda y botón) */
+.form-group {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    border: 1px solid #555;
+    padding: 15px 20px;
+    border-radius: 25px;
+    margin-left: 645px;
+    margin-top: -50PX;
+}
+
+/* Estilos para el campo de entrada en el formulario */
+.form-group input {
+    font-family: inherit;
+    width: 300px;
+    border: none;
+    outline: none;
+    font-size: 15px;
+    background-color: var(--clr-gray);
+}
+
+/* Estilos para el ícono de búsqueda */
+.icon-search {
+    width: 20px;
+    height: 20px;
+    stroke: #555;
+}
+
+/* Estilos para el botón de búsqueda */
+.btn-search {
+    border: 1px solid rgb(255, 125, 125);
+    outline: none;
+    border-radius: 25px;
+    font-family: inherit;
+    padding: 15px 30px;
+    cursor: pointer;
+    letter-spacing: 2px;
+    background-color: red;
+    color: white;
+    margin-top: -50PX;
+}
+
+/* Cambio de color al pasar el ratón sobre el botón de búsqueda */
+.btn-search:hover {
+    background-color: rgb(255, 125, 125);
+    color: black;
+}
+
+/* Estilos para la navegación */
 .nav {
     display: flex;
     flex-direction: column;
@@ -65,6 +137,7 @@ header {
     margin: 0 auto;
 }
 
+/* Estilos para la lista de navegación */
 .nav-list {
     display: flex;
     align-items: center;
@@ -72,6 +145,7 @@ header {
     gap: .5rem;
 }
 
+/* Estilos generales para los botones de la navegación */
 .btn-header {
     background-color: var(--clr-gray);
     padding: .5rem;
@@ -83,45 +157,49 @@ header {
     transition: .2s;
 }
 
+/* Cambio de escala y sombra al pasar el ratón sobre los botones de navegación */
 .btn-header:hover {
     transform: scale(1.1);
     box-shadow: 0 0 2rem rgba(0, 0, 0, .25);
 }
 
-#logo {
-    width: 100px;
-    height: 36px;
-}
-
+/* Estilos para el botón "Cuenta" */
 .cuenta {
     background-color: #0b0b0b;
     color: var(--clr-white);
 }
 
+
+
+/* Estilos para el cuerpo principal del documento */
 main {
     padding: 2rem;
     max-width: 1000px;
     margin: 0 auto;
 }
 
+/* Estilos para el contenedor de animales */
 .animales-todos {
     display: grid;
     grid-template-columns: 1fr;
     gap: 1rem;
 }
 
+/* Cambio de diseño de la cuadrícula en pantallas más grandes */
 @media screen and (min-width: 470px){
     .animales-todos {
         grid-template-columns: 1fr 1fr;
     }
 }
 
+/* Cambio de diseño de la cuadrícula en pantallas aún más grandes */
 @media screen and (min-width: 700px){
     .animales-todos {
         grid-template-columns: 1fr 1fr 1fr;
     }
 }
 
+/* Estilos para la tarjeta de animal */
 .animal {
     border-radius: 1rem;
     background-color: var(--clr-white) !important;
@@ -131,8 +209,10 @@ main {
     position: relative;
     isolation: isolate;
     overflow: hidden;
+    cursor: pointer;
 }
 
+/* Estilos para el fondo de la tarjeta de animal */
 .animal-id-back {
     position: absolute;
     top: 1rem;
@@ -144,19 +224,22 @@ main {
     z-index: -1;
 }
 
+/* Estilos para la sección de imagen de la tarjeta de animal */
 .animal-imagen {
     padding-inline: 1rem;
     display: flex;
     justify-content: center;
 }
 
+/* Estilos para la imagen dentro de la tarjeta de animal */
 .animal-imagen img {
-    width: 96px; /* Tamaño renderizado */
-    height: 96px; /* Tamaño renderizado */
-    max-width: 475px; /* Tamaño intrínseco máximo */
-    max-height: 475px; /* Tamaño intrínseco máximo */
+    width: 96px;
+    height: 96px;
+    max-width: 475px;
+    max-height: 475px;
 }
 
+/* Estilos para la sección de información de la tarjeta de animal */
 .animal-info {
     display: flex;
     flex-direction: column;
@@ -166,6 +249,7 @@ main {
     text-align: center;
 }
 
+/* Estilos para el contenedor de nombre de la tarjeta de animal */
 .nombre-contenedor {
     display: flex;
     align-items: center;
@@ -174,6 +258,7 @@ main {
     justify-content: center;
 }
 
+/* Estilos para el identificador de la tarjeta de animal */
 .animal-id {
     background-color: var(--clr-gray);
     padding: .25rem .5rem;
@@ -182,10 +267,12 @@ main {
     font-weight: 500;
 }
 
+/* Estilos para el nombre de la tarjeta de animal */
 .animal-nombre {
     font-size: 1.4rem;
 }
 
+/* Estilos para la sección de tipos de la tarjeta de animal */
 .animal-tipos {
     display: flex;
     gap: .5rem;
@@ -195,17 +282,20 @@ main {
     justify-content: center;
 }
 
+/* Estilos para los tipos en la tarjeta de animal */
 .tipo {
     padding: .25rem .5rem;
     border-radius: 100vmax;
 }
 
+/* Estilos para la sección de estadísticas de la tarjeta de animal */
 .animal-stats {
     display: flex;
     gap: 1rem;
     font-size: .85rem;
 }
 
+/* Estilos para las estadísticas en la tarjeta de animal */
 .stat {
     background-color: var(--clr-gray);
     padding: .25rem .5rem;
@@ -214,8 +304,8 @@ main {
 
 
 
-
-
+/* Estilos específicos para cada tipo de animal */
+/* ... (cada tipo tiene su propio conjunto de estilos) */
 .felino {
     background-color: var(--type-felino);
     color: var(--clr-black);

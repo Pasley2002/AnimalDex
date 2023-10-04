@@ -1,20 +1,42 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
+    <!-- Configuración del documento -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>AnimalDex</title>
-    <link rel="stylesheet" href="css/main.css">
+    <link rel="icon" href="image/Logo_Pestaña.png">
+    <link rel="stylesheet" href="css/main.css"> <!-- Enlace al archivo de estilo CSS -->
 </head>
 <body>
 
+    <!-- Encabezado de la página -->
     <header>
+        <!-- Barra de navegación -->
         <nav class="nav">
             <div>
+                <!-- Logo de AnimalDex -->
                 <img src="image/logo.png" alt="Logo AnimalDex" id="logo">
+                <!-- Botón para crear una cuenta -->
                 <button class="btn btn-header cuenta" id="crear_cuenta">Cuenta</button>
+                <!-- Formulario de búsqueda -->
+                <form id="searchForm">
+                    <div class="form-group">
+                        <!-- Icono de búsqueda -->
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="icon-search">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M21 21l-5.197-5.197m0 0A7.5 7.5 0 105.196 5.196a7.5 7.5 0 0010.607 10.607z" />
+                          </svg>
+                          <!-- Campo de entrada de búsqueda -->
+                          <input type="search" placeholder="Buscar nombre de animal">       
+                    </div>
+                    <!-- Botón de búsqueda -->
+                    <button class="btn-search">Buscar</button>
+                </form>
             </div>
+            <!-- Lista de navegación -->
             <ul class="nav-list">
+                <!-- Botones para filtrar por tipo de animal -->
+                <!-- ... (cada botón tiene su propio ID y clase de estilo) -->
                 <li class="nav-item"><button class="btn btn-header" id="verTodos">Ver todos</button></li>
                 <li class="nav-item"><button class="btn btn-header felino" id="felino">Felinos</button></li>
                 <li class="nav-item"><button class="btn btn-header canino" id="canino">Caninos</button></li>
@@ -37,29 +59,46 @@
             </ul>
         </nav>
     </header>
-    <main>
 
+    <!-- Cuerpo principal de la página -->
+    <main>
         <div id="todos">
+            <!-- Contenedor de todos los animales -->
             <div class="animales-todos" id="listaAnimal">
+                <!-- Tarjeta de animal (ejemplo: felino) -->
                 <div class="animal felino">
+                    <!-- Identificador de la tarjeta de animal en la parte posterior -->
                     <p class="animal-id-back">#001</p>
+                    <!-- Sección de imagen de la tarjeta de animal -->
                     <div class="animal-imagen">
+                        <!-- Imagen del animal -->
                         <img src="image/Gato.png" alt="gato">
                     </div>
+                    <!-- Sección de información de la tarjeta de animal -->
                     <div class="animal-info">
+                        <!-- Contenedor para el identificador y el nombre -->
                         <div class="nombre-contenedor">
+                            <!-- Identificador en la parte frontal de la tarjeta -->
                             <p class="animal-id">#001</p>
+                            <!-- Nombre del animal -->
                             <h2 class="animal-nombre">gato</h2>
                         </div>
+                        <!-- Sección de tipos del animal -->
                         <div class="animal-tipos">
+                            <!-- Tipo específico del animal (en este caso, felino) -->
                             <p class="felino tipo">FELINO</p>
                         </div>
+                        <!-- Sección de estadísticas del animal -->
                         <div class="animal-stats">
+                            <!-- Estadísticas específicas del animal (por ejemplo, altura y peso) -->
                             <p class="stat">50cm</p>
                             <p class="stat">50kg</p>
                         </div>
                     </div>
                 </div>
+
+                <!-- Repite la estructura para otros animales -->
+                <!-- ... -->
                 <div class="animal canino">
                     <p class="animal-id-back">#002</p>
                     <div class="animal-imagen">
@@ -79,6 +118,7 @@
                         </div>
                     </div>
                 </div>
+
                 <div class="animal ursido">
                     <p class="animal-id-back">#003</p>
                     <div class="animal-imagen">
@@ -98,6 +138,7 @@
                         </div>
                     </div>
                 </div>
+
                 <div class="animal cervido">
                     <p class="animal-id-back">#004</p>
                     <div class="animal-imagen">
@@ -117,6 +158,7 @@
                         </div>
                     </div>
                 </div>
+                
                 <div class="animal bovino">
                     <p class="animal-id-back">#005</p>
                     <div class="animal-imagen">
@@ -136,6 +178,7 @@
                         </div>
                     </div>
                 </div>
+
                 <div class="animal equido">
                     <p class="animal-id-back">#006</p>
                     <div class="animal-imagen">
@@ -155,6 +198,7 @@
                         </div>
                     </div>
                 </div>
+
                 <div class="animal suido">
                     <p class="animal-id-back">#007</p>
                     <div class="animal-imagen">
@@ -174,6 +218,7 @@
                         </div>
                     </div>
                 </div>
+
                 <div class="animal hominino">
                     <p class="animal-id-back">#008</p>
                     <div class="animal-imagen">
@@ -193,6 +238,7 @@
                         </div>
                     </div>
                 </div>
+
                 <div class="animal cetaceo">
                     <p class="animal-id-back">#009</p>
                     <div class="animal-imagen">
@@ -212,6 +258,7 @@
                         </div>
                     </div>
                 </div>
+
                 <div class="animal mustelido">
                     <p class="animal-id-back">#010</p>
                     <div class="animal-imagen">
@@ -231,6 +278,7 @@
                         </div>
                     </div>
                 </div>
+
                 <div class="animal elefantido">
                     <p class="animal-id-back">#011</p>
                     <div class="animal-imagen">
@@ -250,6 +298,7 @@
                         </div>
                     </div>
                 </div>
+
                 <div class="animal rinocerotido">
                     <p class="animal-id-back">#012</p>
                     <div class="animal-imagen">
@@ -269,6 +318,7 @@
                         </div>
                     </div>
                 </div>
+                
                 <div class="animal procionido">
                     <p class="animal-id-back">#013</p>
                     <div class="animal-imagen">
@@ -288,6 +338,7 @@
                         </div>
                     </div>
                 </div>
+
                 <div class="animal lagomorfo">
                     <p class="animal-id-back">#014</p>
                     <div class="animal-imagen">
@@ -307,6 +358,7 @@
                         </div>
                     </div>
                 </div>
+
                 <div class="animal pinnipedo">
                     <p class="animal-id-back">#015</p>
                     <div class="animal-imagen">
@@ -326,6 +378,7 @@
                         </div>
                     </div>
                 </div>
+
                 <div class="animal quiroptero">
                     <p class="animal-id-back">#016</p>
                     <div class="animal-imagen">
@@ -345,6 +398,7 @@
                         </div>
                     </div>
                 </div>
+
                 <div class="animal talpidae">
                     <p class="animal-id-back">#017</p>
                     <div class="animal-imagen">
@@ -364,6 +418,7 @@
                         </div>
                     </div>
                 </div>
+
                 <div class="animal marsupial">
                     <p class="animal-id-back">#018</p>
                     <div class="animal-imagen">
@@ -383,12 +438,12 @@
                         </div>
                     </div>
                 </div>
+                
             </div>
         </div>
-          
-
     </main>
 
+    <!-- Archivo de script JavaScript -->
     <script src="js/main.js"></script>
 </body>
 </html>
