@@ -8,31 +8,36 @@
     <link rel="icon" href="image/Logo_Pestaña.png">
     <link rel="stylesheet" href="css/main.css"> <!-- Enlace al archivo de estilo CSS -->
 </head>
+
 <body>
 
     <!-- Encabezado de la página -->
     <header>
-        <!-- Barra de navegación -->
-        <nav class="nav">
-            <div>
+        <div id="header-content">
+            <div class="centrado-vertical">
                 <!-- Logo de AnimalDex -->
                 <img src="image/logo.png" alt="Logo AnimalDex" id="logo">
                 <!-- Botón para crear una cuenta -->
                 <button class="btn btn-header cuenta" id="crear_cuenta">Cuenta</button>
-                <!-- Formulario de búsqueda -->
-                <form>
-                    <div class="form-group">
-                        <!-- Icono de búsqueda -->
-                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="icon-search">
-                            <path stroke-linecap="round" stroke-linejoin="round" d="M21 21l-5.197-5.197m0 0A7.5 7.5 0 105.196 5.196a7.5 7.5 0 0010.607 10.607z" />
-                          </svg>
-                          <!-- Campo de entrada de búsqueda -->
-                          <input type="search" id="searchInput" placeholder="Buscar nombre de animal">       
-                    </div>
-                    <!-- Botón de búsqueda -->
-                    <button class="btn-search">Buscar</button>
-                </form>
             </div>
+
+            <!-- Formulario de búsqueda -->
+            <form>
+                <div class="form-group">
+                    <!-- Icono de búsqueda -->
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="icon-search">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M21 21l-5.197-5.197m0 0A7.5 7.5 0 105.196 5.196a7.5 7.5 0 0010.607 10.607z"/>
+                      </svg>
+                      <!-- Campo de entrada de búsqueda -->
+                      <input type="search" id="searchInput" placeholder="Buscar nombre de animal">      
+                </div>
+                <!-- Botón de búsqueda -->
+                <button class="btn-search">Buscar</button>
+            </form>
+        </div>
+
+        <!-- Barra de navegación -->
+        <nav class="nav">            
             <!-- Lista de navegación -->
             <ul class="nav-list">
                 <!-- Botones para filtrar por tipo de animal -->
@@ -98,7 +103,6 @@
                 </div>
 
                 <!-- Repite la estructura para otros animales -->
-                <!-- ... -->
                 <div class="animal canino">
                     <p class="animal-id-back">#002</p>
                     <div class="animal-imagen">
@@ -158,7 +162,7 @@
                         </div>
                     </div>
                 </div>
-                
+               
                 <div class="animal bovino">
                     <p class="animal-id-back">#005</p>
                     <div class="animal-imagen">
@@ -184,6 +188,7 @@
                     <div class="animal-imagen">
                         <img src="image/Caballo.png" alt="Caballo">
                     </div>
+
                     <div class="animal-info">
                         <div class="nombre-contenedor">
                             <p class="animal-id">#006</p>
@@ -318,7 +323,7 @@
                         </div>
                     </div>
                 </div>
-                
+
                 <div class="animal procionido">
                     <p class="animal-id-back">#013</p>
                     <div class="animal-imagen">
@@ -364,6 +369,7 @@
                     <div class="animal-imagen">
                         <img src="image/Leon_marino.png" alt="Leon_marino">
                     </div>
+
                     <div class="animal-info">
                         <div class="nombre-contenedor">
                             <p class="animal-id">#015</p>
@@ -398,7 +404,6 @@
                         </div>
                     </div>
                 </div>
-
                 <div class="animal talpidae">
                     <p class="animal-id-back">#017</p>
                     <div class="animal-imagen">
@@ -409,6 +414,7 @@
                             <p class="animal-id">#017</p>
                             <h2 class="animal-nombre">topo</h2>
                         </div>
+
                         <div class="animal-tipos">
                             <p class="talpidae tipo">TALPIDAE</p>
                         </div>
@@ -438,7 +444,6 @@
                         </div>
                     </div>
                 </div>
-                
             </div>
         </div>
     </main>

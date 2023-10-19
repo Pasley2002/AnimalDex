@@ -59,14 +59,24 @@ body {
 header {
     padding-block: 1rem;
     box-shadow: 0 0 2rem -1rem rgba(0, 0, 0, .5);
+}
+
+#header-content {
     display: flex;
+    align-items: center;
     justify-content: space-between;
+    margin-bottom: 10px;
+}
+
+.centrado-vertical {
+    display: flex;
     align-items: center;
 }
 
 /* Estilos para el logo */
 #logo {
-    width: 100px;
+    margin-left: 10px;
+    max-width: 100px;
     height: 36px;
 }
 
@@ -102,6 +112,7 @@ header {
 }
 
 /* Cambio de escala y sombra al pasar el ratón sobre los botones de navegación */
+
 .btn-header:hover {
     transform: scale(1.1);
     box-shadow: 0 0 2rem rgba(0, 0, 0, .25);
@@ -111,6 +122,7 @@ header {
 .cuenta {
     background-color: #0b0b0b;
     color: var(--clr-white);
+    margin-left: 15px;
 }
 
 /* Estilos para el formulario en el encabezado */
@@ -131,6 +143,7 @@ header form {
 }
 
 /* Estilos para el campo de entrada en el formulario */
+
 .form-group input {
     font-family: inherit;
     width: 300px;
@@ -165,7 +178,6 @@ header form {
     background-color: rgb(255, 125, 125);
     color: black;
 }
-
 
 
 /* Estilos para el cuerpo principal del documento */
@@ -298,7 +310,6 @@ main {
     padding: .25rem .5rem;
     border-radius: 100vmax;
 }
-
 
 
 /* Estilos específicos para cada tipo de animal */
