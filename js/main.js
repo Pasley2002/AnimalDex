@@ -78,9 +78,7 @@ function no_robots(username, contraseña) {
         alert("Has cancelado el proceso.");
         // Muestra todos los animales nuevamente
         mostrarAnimales();
-    }
-
-    if (parseInt(resultado) === 4) {
+    } else if (parseInt(resultado) === 4) {
         alert("Tu nombre de usuario es: " + username + "\nTu contraseña es: " + contraseña + "\n" + "\nHas creado tu cuenta de AnimalDex, cuando tengamos una base de datos podrás aprovechar más sobre tu cuenta ¡Versión demo! Igual muchas gracias :)");
         // Muestra todos los animales nuevamente
         mostrarAnimales();
